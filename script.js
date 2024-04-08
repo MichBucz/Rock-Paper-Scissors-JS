@@ -1,5 +1,6 @@
 let choices = ["rock", "paper", "scissors"];
 
+
 function playGame() {
   function getPlayerChoice() {
     let playerChoice = prompt("rock, paper or scissors?").toLowerCase();
@@ -10,7 +11,7 @@ function playGame() {
     ) {
       return playerChoice;
     } else {
-      console.log("Please type rock, paper or scissors");
+      prompt("Please type rock, paper or scissors");
     }
   }
 
