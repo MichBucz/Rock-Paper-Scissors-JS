@@ -1,6 +1,5 @@
 let choices = ["rock", "paper", "scissors"];
 
-
 function playGame() {
   function getPlayerChoice() {
     let playerChoice = prompt("rock, paper or scissors?").toLowerCase();
@@ -23,11 +22,7 @@ function playGame() {
   const computerSelection = getComputerChoice();
 
   function playRound(playerSelection, computerSelection) {
-    if (
-      (playerSelection === "paper" && computerSelection === "paper") ||
-      (playerSelection === "rock" && computerSelection === "rock") ||
-      (playerSelection === "scissors" && computerSelection === "scissors")
-    ) {
+    if (playerSelection === computerSelection) {
       console.log("It's a draw");
     } else if (
       (playerSelection === "scissors" && computerSelection === "paper") ||
