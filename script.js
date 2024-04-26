@@ -3,7 +3,6 @@ let choices = ["rock", "paper", "scissors"];
 let playerScore = 0;
 let computerScore = 0;
 
-
 function playGame() {
   function getPlayerChoice() {
     let playerChoice = prompt("rock, paper or scissors?").toLowerCase();
@@ -34,42 +33,33 @@ function playGame() {
       (playerSelection === "rock" && computerSelection === "scissors")
     ) {
       console.log("You Win");
-      return "win";
+      playerScore++;
     } else if (
       (playerSelection === "paper" && computerSelection === "scissors") ||
       (playerSelection === "rock" && computerSelection === "paper") ||
       (playerSelection === "scissors" && computerSelection === "rock")
     ) {
       console.log("You Lose");
-      return "lose";
+      computerScore++;
     }
   }
 
   console.log(playerSelection, computerSelection);
   playRound(playerSelection, computerSelection);
+  console.log(
+    `Player score : ${playerScore}`,
+    `Compuer score : ${computerScore}`
+  );
 }
 
-for (let i = 0; i <= 5; i++) {
+for (let i = 0; i < 5; i++) {
   playGame();
 }
 
-function showPlayerScore() {
- result = playGame
-  if (result === "win") {
-    playerScore++;
-  } else if (result === "lose") {
-    computerScore++;
-  }
-
-  if (playerScore > computerScore) {
-    console.log("YOU WON!!!");
-    console.log("Your Points: ", playerScore);
-    console.log("Computer's points: ", computerScore);
-  } else if (playerScore < computerScore) {
-    console.log("YOU LOST :C");
-    console.log("Your Points: ", playerScore);
-    console.log("Computer's points: ", computerScore);
-  }
+if (playerScore > computerScore) {
+  console.log("YOU WON!!!");
+} else if (playerScore < computerScore) {
+  console.log("YOU LOST :C");
+} else {
+  console.log("IT'S A DRAW");
 }
-
-console.log(showPlayerScore());
