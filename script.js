@@ -1,22 +1,21 @@
 let choices = ["rock", "paper", "scissors"];
 
+const playerSelectionDisplay = document.querySelector(".playerSelection");
+const computerSelectDisplay = document.querySelector(".computerSelection");
+const resultDisplay = document.querySelector(".result");
+const playerScoreDisplay = document.querySelector(".playerScore");
+const computerScoreDisplay = document.querySelector(".computerScore");
+const allChoices = document.querySelector(".choices");
+const rockButton = document.querySelector(".rock");
+
+function getPlayerChoice(choice) {
+  console.log(choice);
+}
+
 let playerScore = 0;
 let computerScore = 0;
 
 function playGame() {
-  function getPlayerChoice() {
-    let playerChoice = prompt("rock, paper or scissors?").toLowerCase();
-    if (
-      playerChoice === "rock" ||
-      playerChoice === "paper" ||
-      playerChoice === "scissors"
-    ) {
-      return playerChoice;
-    } else {
-      prompt("Please type rock, paper or scissors");
-    }
-  }
-
   function getComputerChoice() {
     let randomNumber = Math.floor(Math.random() * choices.length);
     return choices[randomNumber];
