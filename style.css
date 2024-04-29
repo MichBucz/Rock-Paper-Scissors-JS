@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  padding: 20px;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+}
+.madeBy {
+  padding: 4rem 0 4rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.selections, .scores, .weapons{
+    padding: 4rem 0 4rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.result{
+    padding: 4rem 0 4rem 0;
+    display: flex;
+    justify-content: center;
+}

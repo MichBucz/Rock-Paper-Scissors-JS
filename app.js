@@ -66,7 +66,7 @@ function playGame(playerSelection) {
     `Player score : ${playerScore}`,
     `Compuer score : ${computerScore}`
   );
-  computerSelectDisplay.textContent = `computer: ${computerSelection}`;
+  computerSelectDisplay.textContent = `Computer: ${computerSelection}`;
 
   playerScoreDisplay.textContent = `Player score : ${playerScore}`;
   computerScoreDisplay.textContent = `Compuer score : ${computerScore}`;
@@ -97,9 +97,9 @@ function playGame(playerSelection) {
       }
     });
 
-    const reset = document.createElement("div");
-    reset.innerHTML = "<button onclick='location.reload()'>RESTART</button>";
-    resultDisplay.appendChild(reset);
+    const restart = document.createElement("div");
+    restart.innerHTML = "<button class=`restart` onclick='location.reload()'>RESTART</button>";
+    resultDisplay.appendChild(restart);
 
     playerScoreDisplay.textContent = "";
     computerScoreDisplay.textContent = "";
